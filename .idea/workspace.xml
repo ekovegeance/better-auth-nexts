@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: add user profile editing dialog and integrate with user session">
-      <change afterPath="$PROJECT_DIR$/components/mode-toggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navbar/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar/navbar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: add theme provider and mode toggle component for theme switching" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +83,7 @@
       <workItem from="1751545392060" duration="294000" />
       <workItem from="1751545719088" duration="505000" />
       <workItem from="1751546345984" duration="619000" />
-      <workItem from="1751597687096" duration="9100000" />
+      <workItem from="1751597687096" duration="9213000" />
     </task>
     <task id="LOCAL-00001" summary="fix: correct typo in database variable name and update module file reference">
       <option name="closed" value="true" />
@@ -116,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751613647452</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add theme provider and mode toggle component for theme switching">
+      <option name="closed" value="true" />
+      <created>1751614368855</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751614368855</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +135,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add user profile editing dialog and integrate with user session" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add user profile editing dialog and integrate with user session" />
+    <MESSAGE value="feat: add theme provider and mode toggle component for theme switching" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add theme provider and mode toggle component for theme switching" />
   </component>
 </project>
