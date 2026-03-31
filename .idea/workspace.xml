@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: add landing components including hero, features, author, and call-to-action sections">
-      <change afterPath="$PROJECT_DIR$/components/landing/author.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/landing/cta.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/landing/features.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/landing/hero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/hover-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/signin/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/signup/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(landing)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(landing)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/navbar/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,7 @@
       <workItem from="1751545719088" duration="505000" />
       <workItem from="1751546345984" duration="619000" />
       <workItem from="1751597687096" duration="9213000" />
-      <workItem from="1774946724824" duration="12667000" />
+      <workItem from="1774946724824" duration="12966000" />
     </task>
     <task id="LOCAL-00001" summary="fix: correct typo in database variable name and update module file reference">
       <option name="closed" value="true" />
@@ -160,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774968784429</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: add landing components including hero, features, author, and call-to-action sections">
+      <option name="closed" value="true" />
+      <created>1774971034220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774971034220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -117,13 +117,15 @@ export default function Navbar() {
                     {session ? (
                         <UserMenu user={session.user}/>
                     ) : (
+                        <div className="flex items-center gap-2">
                         <Button asChild variant="ghost" className="text-sm">
                             <a href="/signin">Sign In</a>
                         </Button>
-                    )}
-                    <Button asChild className="text-sm">
+                        <Button asChild className="text-sm">
                         <Link href="/signup">Signup</Link>
-                    </Button>
+                        </Button>
+                        </div>
+                    )}
                     <ModeToggle/>
                 </div>
             </div>
