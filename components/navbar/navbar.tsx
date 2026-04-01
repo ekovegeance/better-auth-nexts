@@ -11,22 +11,21 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
-import {ShieldUser} from "lucide-react";
 
-import {authClient} from "@/lib/auth-client";
+import {client} from "@/lib/auth/client";
 import UserMenu from "@/components/navbar/user-menu";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
+import {AudioWaveform} from "lucide-react";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-    {href: "/", label: "Better Auth", active: true},
-    {href: "https://www.better-auth.com/docs/introduction", label: "Docs", active: false},
+    {href: "/", label: "vexts", active: true},
 ]
 
 export default function Navbar() {
 
-    const {data: session, error} = authClient.useSession()
+    const {data: session, error} = client.useSession()
 
     if (error) {
         console.error("Error fetching session:", error);
@@ -93,7 +92,7 @@ export default function Navbar() {
                     {/* Main nav */}
                     <div className="flex items-center gap-6">
                         <a href="#" className="text-primary hover:text-primary/90">
-                            <ShieldUser/>
+                            <AudioWaveform/>
                         </a>
                         {/* Navigation menu */}
                         <NavigationMenu className="max-md:hidden">
@@ -118,13 +117,15 @@ export default function Navbar() {
                     {session ? (
                         <UserMenu user={session.user}/>
                     ) : (
+                        <div className="flex items-center gap-2">
                         <Button asChild variant="ghost" className="text-sm">
                             <a href="/signin">Sign In</a>
                         </Button>
+                        <Button asChild className="text-sm">
+                        <Link href="/signup">Signup</Link>
+                        </Button>
+                        </div>
                     )}
-                    <Button asChild className="text-sm">
-                        <Link href="https://github.com/ekovegeance/better-auth-nexts">Get Started</Link>
-                    </Button>
                     <ModeToggle/>
                 </div>
             </div>
