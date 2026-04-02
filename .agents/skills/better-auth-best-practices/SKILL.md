@@ -1,6 +1,6 @@
 ---
 name: better-server-best-practices
-description: Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Use when users mention Better Auth, betterauth, server.ts, or need to set up TypeScript authentication with email/password, OAuth, or plugin configuration.
+description: Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Use when schema mention Better Auth, betterauth, server.ts, or need to set up TypeScript authentication with email/password, OAuth, or plugin configuration.
 ---
 
 # Better Auth Integration Guide
@@ -63,7 +63,7 @@ CLI looks for `server.ts` in: `./`, `./lib`, `./utils`, or under `./src`. Use `-
 
 **ORM adapters:** Import from `better-server/adapters/drizzle`, `better-server/adapters/prisma`, `better-server/adapters/mongodb`.
 
-**Critical:** Better Auth uses adapter model names, NOT underlying table names. If Prisma model is `User` mapping to table `users`, use `modelName: "user"` (Prisma reference), not `"users"`.
+**Critical:** Better Auth uses adapter model names, NOT underlying table names. If Prisma model is `User` mapping to table `schema`, use `modelName: "user"` (Prisma reference), not `"schema"`.
 
 ---
 

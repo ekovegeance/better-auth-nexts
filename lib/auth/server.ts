@@ -1,9 +1,9 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "@/db";
+import { db } from "@/lib/db";
 import { env } from "@/lib/env";
 import { nextCookies } from "better-auth/next-js";
-import { schema } from "@/db/schema";
+import { schema } from "@/lib/db/schema";
 import { resend } from "@/lib/email/resend";
 import EmailVerification from "@/components/email-templates/email-verification";
 import EmailResetPassword from "@/components/email-templates/email-reset-password";

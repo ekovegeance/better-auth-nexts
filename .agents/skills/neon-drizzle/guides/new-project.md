@@ -191,7 +191,7 @@ Based on app type, create appropriate schema:
 ```typescript
 import { pgTable, serial, text, boolean, timestamp, varchar } from 'drizzle-orm/pg-core';
 
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull().unique(),
   name: varchar('name', { length: 255 }).notNull(),
@@ -200,7 +200,7 @@ export const users = pgTable('users', {
 
 export const todos = pgTable('todos', {
   id: serial('id').primaryKey(),
-  userId: serial('user_id').notNull().references(() => users.id),
+  userId: serial('user_id').notNull().references(() => schema.id),
   title: text('title').notNull(),
   completed: boolean('completed').default(false),
   createdAt: timestamp('created_at').defaultNow(),
@@ -212,7 +212,7 @@ export const todos = pgTable('todos', {
 import { pgTable, serial, text, timestamp, varchar, index } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull().unique(),
   name: varchar('name', { length: 255 }).notNull(),
@@ -221,7 +221,7 @@ export const users = pgTable('users', {
 
 export const posts = pgTable('posts', {
   id: serial('id').primaryKey(),
-  userId: serial('user_id').notNull().references(() => users.id),
+  userId: serial('user_id').notNull().references(() => schema.id),
   title: text('title').notNull(),
   content: text('content').notNull(),
   createdAt: timestamp('created_at').defaultNow(),
@@ -229,14 +229,14 @@ export const posts = pgTable('posts', {
   userIdIdx: index('posts_user_id_idx').on(table.userId),
 }));
 
-export const usersRelations = relations(users, ({ many }) => ({
+export const usersRelations = relations(schema, ({ many }) => ({
   posts: many(posts),
 }));
 
 export const postsRelations = relations(posts, ({ one }) => ({
-  author: one(users, {
+  author: one(schema, {
     fields: [posts.userId],
-    references: [users.id],
+    references: [schema.id],
   }),
 }));
 ```

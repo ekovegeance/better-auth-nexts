@@ -135,7 +135,7 @@ export const postsRelations = relations(posts, ({ one }) => ({
 ```typescript
 import { pgTable, serial, varchar, timestamp, boolean } from 'drizzle-orm/pg-core';
 
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull().unique(),
   passwordHash: varchar('password_hash', { length: 255 }),
@@ -202,7 +202,7 @@ export const products = pgTable('products', {
 
 **Step 1:** Update schema:
 ```typescript
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull(),
   phoneNumber: varchar('phone_number', { length: 20 }), // NEW
@@ -226,7 +226,7 @@ export DATABASE_URL="$(grep DATABASE_URL .env.local | cut -d '=' -f2)" && \
 
 **Step 1:** Update schema:
 ```typescript
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   fullName: varchar('full_name', { length: 255 }), // was 'name'
 });
@@ -240,11 +240,11 @@ export const users = pgTable('users', {
 **Step 3:** Edit migration file manually:
 ```sql
 -- Change from:
--- ALTER TABLE users DROP COLUMN name;
--- ALTER TABLE users ADD COLUMN full_name VARCHAR(255);
+-- ALTER TABLE schema DROP COLUMN name;
+-- ALTER TABLE schema ADD COLUMN full_name VARCHAR(255);
 
 -- To:
-ALTER TABLE users RENAME COLUMN name TO full_name;
+ALTER TABLE schema RENAME COLUMN name TO full_name;
 ```
 
 **Step 4:** Apply migration:
@@ -256,7 +256,7 @@ ALTER TABLE users RENAME COLUMN name TO full_name;
 
 **Step 1:** Remove from schema:
 ```typescript
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull(),
   // removed: phoneNumber
@@ -321,7 +321,7 @@ export const posts = pgTable('posts', {
 
 **Single column:**
 ```typescript
-export const users = pgTable('users', {
+export const schema = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull().unique(),
 });

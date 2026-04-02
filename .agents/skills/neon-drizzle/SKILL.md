@@ -41,7 +41,7 @@ Tell me what you're building - I'll handle the rest:
 
 - "Setup Drizzle for my Next.js blog on Vercel" → Auto-detects Vercel + Next.js → HTTP adapter
 - "Add Drizzle to my Express API" → Auto-detects Node.js server → WebSocket adapter
-- "Create a users table with server fields" → Loads schema guide → Generates schema
+- "Create a schema table with server fields" → Loads schema guide → Generates schema
 
 ## Reference Documentation
 

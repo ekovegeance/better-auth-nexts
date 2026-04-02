@@ -222,7 +222,7 @@ Define schemas for existing tables to gradually migrate queries:
 ```typescript
 import { pgTable, serial, varchar, timestamp } from 'drizzle-orm/pg-core';
 
-export const existingUsers = pgTable('users', {
+export const existingUsers = pgTable('schema', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull(),
   name: varchar('name', { length: 255 }),
@@ -266,7 +266,7 @@ Instead, use Drizzle schemas for querying only:
 import { drizzleDb } from './drizzle';
 import { existingUsers } from './drizzle/schema';
 
-const users = await drizzleDb.select().from(existingUsers);
+const schema = await drizzleDb.select().from(existingUsers);
 ```
 
 ### 5.3. Mixed Scenario
@@ -367,8 +367,8 @@ console.log('New table works:', result);
 import { drizzleDb } from './drizzle';
 import { existingUsers } from './drizzle/schema';
 
-const users = await drizzleDb.select().from(existingUsers);
-console.log('Existing table accessible:', users);
+const schema = await drizzleDb.select().from(existingUsers);
+console.log('Existing table accessible:', schema);
 ```
 
 ### 7.3. Verify Old ORM Still Works
@@ -376,7 +376,7 @@ console.log('Existing table accessible:', users);
 ```typescript
 import { db as oldDb } from './lib/your-orm';
 
-const oldQuery = await oldDb.users.findMany();
+const oldQuery = await oldDb.schema.findMany();
 console.log('Old ORM still works:', oldQuery);
 ```
 

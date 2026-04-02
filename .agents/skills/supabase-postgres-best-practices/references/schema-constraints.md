@@ -44,7 +44,7 @@ begin
     select 1 from pg_constraint
     where conname = 'check_age_positive'
   ) then
-    alter table users add constraint check_age_positive check (age > 0);
+    alter table schema add constraint check_age_positive check (age > 0);
   end if;
 end $$;
 

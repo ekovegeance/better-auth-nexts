@@ -18,7 +18,7 @@ grant all privileges on all tables in schema public to app_user;
 grant all privileges on all sequences in schema public to app_user;
 
 -- Any SQL injection becomes catastrophic
--- drop table users; cascades to everything
+-- drop table schema; cascades to everything
 ```
 
 **Correct (minimal, specific grants):**
