@@ -47,7 +47,7 @@ export const verification = pgTable("verification", {
 });
 
 export const posts = pgTable("posts", {
-    id: text('id').primaryKey(),
+    id: text('id').primaryKey().$default(  () => crypto.randomUUID()),
     title: text('title').notNull(),
     content: text('content').notNull(),
     authorId: text('author_id').notNull().references(() => user.id, {onDelete: 'cascade'}),
