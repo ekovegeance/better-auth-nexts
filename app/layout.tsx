@@ -17,12 +17,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
     title: env.NEXT_PUBLIC_APP_NAME,
-    description: "An example application using Better Auth",
+    description: env.NEXT_PUBLIC_APP_DESCRIPTION,
 };
 
 export default function RootLayout({children,}: Readonly<{ children: ReactNode }>) {
     return (
-        <html lang="en" className={cn("font-sans", geist.variable)}>
+        <html lang="en"  suppressHydrationWarning={true}>
         <body
             className={`${plusJakartaSans.className} ${plusJakartaSans.className} antialiased`}
         >
