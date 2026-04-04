@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Session } from "@/lib/auth/types";
 import { useRouter } from "next/navigation";
-import { client, useSession } from "@/lib/auth/client";
+import { auth, useSession } from "@/lib/auth/client";
 import { UAParser } from "ua-parser-js";
 import { BadgeCheckIcon, Laptop, Loader2, Smartphone } from "lucide-react";
 import { toast } from "sonner";
@@ -34,7 +34,7 @@ export default function UserCard(props: {
     sessionToken: string
   ) => {
     setIsTerminating(sessionId);
-    const res = await client.revokeSession({
+    const res = await auth.revokeSession({
       token: sessionToken,
     });
 
@@ -51,7 +51,7 @@ export default function UserCard(props: {
   };
 
   const handleSendVerificationEmail = async () => {
-    await client.sendVerificationEmail(
+    await auth.sendVerificationEmail(
       {
         email: session.user.email,
       },

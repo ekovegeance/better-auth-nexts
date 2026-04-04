@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { client } from "@/lib/auth/client";
+import { auth } from "@/lib/auth/client";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
@@ -46,7 +46,7 @@ export function ForgotPasswordForm({
 
   async function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
     // Handle form submission logic here
-    await client.requestPasswordReset(
+    await auth.requestPasswordReset(
       {
         email: values.email,
         redirectTo: "/reset-password",

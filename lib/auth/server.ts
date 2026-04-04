@@ -9,7 +9,7 @@ import EmailVerification from "@/components/email-templates/email-verification";
 import EmailResetPassword from "@/components/email-templates/email-reset-password";
 
 
-export const server = betterAuth({
+export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.NEXT_PUBLIC_URL,
 

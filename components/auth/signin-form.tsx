@@ -9,7 +9,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from "@
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
-import {client} from "@/lib/auth/client";
+import {auth} from "@/lib/auth/client";
 import {CircleAlert, Loader2} from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import InputPassword from "@/components/ui/input-password";
@@ -35,7 +35,7 @@ export function SignInForm({className, ...props}: ComponentProps<"form">) {
         // Handle form submission logic here
         console.log("Form submitted with values:", values);
 
-        const {data, error,} = await client.signIn.email(
+        const {data, error,} = await auth.signIn.email(
             {
                 email: values.email,
                 password: values.password,
