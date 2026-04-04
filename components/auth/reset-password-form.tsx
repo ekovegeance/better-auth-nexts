@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { client } from "@/lib/auth/client";
+import { auth } from "@/lib/auth/client";
 import { toast } from "sonner";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
@@ -52,7 +52,7 @@ export function ResetPasswordForm({
     }
 
     // Handle form submission logic here
-    await client.resetPassword(
+    await auth.resetPassword(
       {
         newPassword: values.password,
         token: token,

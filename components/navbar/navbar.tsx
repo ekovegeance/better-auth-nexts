@@ -12,7 +12,7 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 
-import {client} from "@/lib/auth/client";
+import {auth} from "@/lib/auth/client";
 import UserMenu from "@/components/navbar/user-menu";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const navigationLinks = [
 
 export default function Navbar() {
 
-    const {data: session, error} = client.useSession()
+    const {data: session, error} = auth.useSession()
 
     if (error) {
         console.error("Error fetching session:", error);

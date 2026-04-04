@@ -1,10 +1,10 @@
-import { client } from '@/lib/auth/client';
+import { auth } from '@/lib/auth/client';
 import {Button} from "@/components/ui/button";
 
 export function SocialSignInButton({provider}: { provider: 'google' | 'facebook';
 }) {
     const handleSignIn = async () => {
-        await client.signIn.social({
+        await auth.signIn.social({
             provider,
             callbackURL: '/'
         });

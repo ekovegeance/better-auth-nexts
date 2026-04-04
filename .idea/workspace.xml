@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="fix: update README setup instructions and enhance tech stack section for clarity">
+    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: update author and features sections with new content and improved layout">
+      <change afterPath="$PROJECT_DIR$/trpc/query-client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trpc/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landing/author.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/author.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landing/features.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/features.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landing/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/auth/[...all]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/[...all]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/trpc/[trpc]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/trpc/[trpc]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/forgot-password-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/forgot-password-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/reset-password-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/reset-password-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/signin-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signin-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signup-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/social-sign-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/social-sign-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/landing/edit-user-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/edit-user-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/landing/user-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/user-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navbar/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navbar/user-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar/user-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/posts/post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/posts/post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trpc/client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/trpc/client.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trpc/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/trpc/init.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trpc/routers/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/trpc/routers/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +57,25 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "vexts",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/me/git/vexts/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;vexts&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/me/git/vexts/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/db" />
@@ -102,7 +120,7 @@
       <workItem from="1774946724824" duration="13276000" />
       <workItem from="1775054804478" duration="18000" />
       <workItem from="1775054919619" duration="4414000" />
-      <workItem from="1775138740900" duration="3093000" />
+      <workItem from="1775138740900" duration="6957000" />
     </task>
     <task id="LOCAL-00001" summary="fix: correct typo in database variable name and update module file reference">
       <option name="closed" value="true" />
@@ -224,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775141171408</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: update author and features sections with new content and improved layout">
+      <option name="closed" value="true" />
+      <created>1775144092135</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1775144092135</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +279,7 @@
     <MESSAGE value="feat: restructure schema and implement posts table with foreign key constraints" />
     <MESSAGE value="fix: correct typo in hero description and update README title for clarity" />
     <MESSAGE value="fix: update README setup instructions and enhance tech stack section for clarity" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update README setup instructions and enhance tech stack section for clarity" />
+    <MESSAGE value="feat: update author and features sections with new content and improved layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update author and features sections with new content and improved layout" />
   </component>
 </project>

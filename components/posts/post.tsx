@@ -2,13 +2,18 @@
 import { ArrowRight, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {formatDate} from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 import postImage from "@/public/post.png"
-import {trpc} from "@/trpc/client";
+import { trpc } from "@/trpc/client";
 
 export default function Post() {
-    const { data: posts} = trpc.post.list.useQuery({ limit: 6, offset: 0 });
+    const { data: posts, isLoading} = trpc.post.list.useQuery({ limit: 6, offset: 0 });
+
+    if (isLoading) {
+        return <p>Loading</p>
+    }
+
     return (
         <section>
             <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
