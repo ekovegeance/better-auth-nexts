@@ -38,6 +38,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.96.0
         version: 5.96.0(react@19.2.4)
+      '@tanstack/react-query-devtools':
+        specifier: ^5.96.2
+        version: 5.96.2(@tanstack/react-query@5.96.0(react@19.2.4))(react@19.2.4)
       '@trpc/client':
         specifier: ^11.16.0
         version: 11.16.0(@trpc/server@11.16.0(typescript@5.8.3))(typescript@5.8.3)
@@ -68,6 +71,9 @@ importers:
       drizzle-orm:
         specifier: 1.0.0-beta.20
         version: 1.0.0-beta.20(@neondatabase/serverless@1.0.1)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.11(@azure/core-client@1.10.1))(@types/pg@8.15.4)(mssql@11.0.1(@azure/core-client@1.10.1))(pg@8.16.2)(postgres@3.4.8)(zod@4.3.6)
+      drizzle-seed:
+        specifier: ^0.3.1
+        version: 0.3.1(drizzle-orm@1.0.0-beta.20(@neondatabase/serverless@1.0.1)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.11(@azure/core-client@1.10.1))(@types/pg@8.15.4)(mssql@11.0.1(@azure/core-client@1.10.1))(pg@8.16.2)(postgres@3.4.8)(zod@4.3.6))
       lucide-react:
         specifier: ^0.523.0
         version: 0.523.0(react@19.2.4)
@@ -123,6 +129,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.10
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.96.2
+        version: 5.96.2(eslint@9.29.0(jiti@2.6.1))(typescript@5.8.3)
       '@types/node':
         specifier: ^20
         version: 20.19.1
@@ -2268,6 +2277,15 @@ packages:
     peerDependencies:
       solid-js: '>=1.9.7'
 
+  '@tanstack/eslint-plugin-query@5.96.2':
+    resolution: {integrity: sha512-OsXCATZ+YmG8TyHrunfYy2IDB+dqY87en2im2A60JPgDAg66cCoHTzJWbe9uH8Cw9/K3NiKYlyyo1erVFu3qFw==}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: ^5.4.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@tanstack/form-core@1.28.6':
     resolution: {integrity: sha512-4zroxL6VDj5O+w7l3dYZnUeL/h30KtNSV7UWzKAL7cl+8clMFdISPDlDlluS37As7oqvPVKo8B83VlIBvgmRog==}
 
@@ -2282,6 +2300,9 @@ packages:
 
   '@tanstack/query-core@5.96.0':
     resolution: {integrity: sha512-sfO3uQeol1BU7cRP6NYY7nAiX3GiNY20lI/dtSbKLwcIkYw/X+w/tEsQAkc544AfIhBX/IvH/QYtPHrPhyAKGw==}
+
+  '@tanstack/query-devtools@5.96.2':
+    resolution: {integrity: sha512-vBTB1Qhbm3nHSbEUtQwks/EdcAtFfEapr1WyBW4w2ExYKuXVi3jIxUIHf5MlSltiHuL7zNyUuanqT/7sI2sb6g==}
 
   '@tanstack/react-devtools@0.10.1':
     resolution: {integrity: sha512-cvcd0EqN7Q2LYatQXxFhOkEa9RUQXZlhXnM1mwuibxmyRX+CMyohUZcgjodtIfgh+RT0Pmvt49liTdZby5ovZw==}
@@ -2314,6 +2335,12 @@ packages:
     peerDependenciesMeta:
       '@tanstack/react-start':
         optional: true
+
+  '@tanstack/react-query-devtools@5.96.2':
+    resolution: {integrity: sha512-nTFKLGuTOFvmFRvcyZ3ArWC/DnMNPoBh6h/2yD6rsf7TCTJCQt+oUWOp2uKPTIuEPtF/vN9Kw5tl5mD1Kbposw==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.96.2
+      react: ^18 || ^19
 
   '@tanstack/react-query@5.96.0':
     resolution: {integrity: sha512-6qbjdm1K5kizVKv9TNqhIN3doq2anRhdF2XaFMFSn4m8L22S69RV+FilvlyVT4RoJyMxtPU5rs4RpdFa/PEC7A==}
@@ -3221,6 +3248,14 @@ packages:
       valibot:
         optional: true
       zod:
+        optional: true
+
+  drizzle-seed@0.3.1:
+    resolution: {integrity: sha512-F/0lgvfOAsqlYoHM/QAGut4xXIOXoE5VoAdv2FIl7DpGYVXlAzKuJO+IphkKUFK3Dz+rFlOsQLnMNrvoQ0cx7g==}
+    peerDependencies:
+      drizzle-orm: '>=0.36.4'
+    peerDependenciesMeta:
+      drizzle-orm:
         optional: true
 
   dunder-proto@1.0.1:
@@ -4649,6 +4684,9 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  pure-rand@6.1.0:
+    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
 
   qs@6.15.0:
     resolution: {integrity: sha512-mAZTtNCeetKMH+pSjrb76NAM8V9a05I9aBZOHztWy/UqcJdQYNsf59vrRKWnojAT9Y+GbIvoTBC++CPHqpDBhQ==}
@@ -7449,6 +7487,15 @@ snapshots:
       - csstype
       - utf-8-validate
 
+  '@tanstack/eslint-plugin-query@5.96.2(eslint@9.29.0(jiti@2.6.1))(typescript@5.8.3)':
+    dependencies:
+      '@typescript-eslint/utils': 8.57.2(eslint@9.29.0(jiti@2.6.1))(typescript@5.8.3)
+      eslint: 9.29.0(jiti@2.6.1)
+    optionalDependencies:
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@tanstack/form-core@1.28.6':
     dependencies:
       '@tanstack/devtools-event-client': 0.4.3
@@ -7474,6 +7521,8 @@ snapshots:
   '@tanstack/pacer-lite@0.1.1': {}
 
   '@tanstack/query-core@5.96.0': {}
+
+  '@tanstack/query-devtools@5.96.2': {}
 
   '@tanstack/react-devtools@0.10.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(csstype@3.2.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(solid-js@1.9.12)':
     dependencies:
@@ -7515,6 +7564,12 @@ snapshots:
       react: 19.2.4
     transitivePeerDependencies:
       - react-dom
+
+  '@tanstack/react-query-devtools@5.96.2(@tanstack/react-query@5.96.0(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@tanstack/query-devtools': 5.96.2
+      '@tanstack/react-query': 5.96.0(react@19.2.4)
+      react: 19.2.4
 
   '@tanstack/react-query@5.96.0(react@19.2.4)':
     dependencies:
@@ -8272,6 +8327,12 @@ snapshots:
       pg: 8.16.2
       postgres: 3.4.8
       zod: 4.3.6
+
+  drizzle-seed@0.3.1(drizzle-orm@1.0.0-beta.20(@neondatabase/serverless@1.0.1)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.11(@azure/core-client@1.10.1))(@types/pg@8.15.4)(mssql@11.0.1(@azure/core-client@1.10.1))(pg@8.16.2)(postgres@3.4.8)(zod@4.3.6)):
+    dependencies:
+      pure-rand: 6.1.0
+    optionalDependencies:
+      drizzle-orm: 1.0.0-beta.20(@neondatabase/serverless@1.0.1)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.11(@azure/core-client@1.10.1))(@types/pg@8.15.4)(mssql@11.0.1(@azure/core-client@1.10.1))(pg@8.16.2)(postgres@3.4.8)(zod@4.3.6)
 
   dunder-proto@1.0.1:
     dependencies:
@@ -9854,6 +9915,8 @@ snapshots:
       ipaddr.js: 1.9.1
 
   punycode@2.3.1: {}
+
+  pure-rand@6.1.0: {}
 
   qs@6.15.0:
     dependencies:
