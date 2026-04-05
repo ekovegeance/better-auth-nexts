@@ -41,13 +41,22 @@ export function ForgotPasswordForm({className, ...props}: React.ComponentProps<"
                     redirectTo: "/reset-password",
                 },
                 {
-                    onRequest: (ctx) => {
+                    onRequest: () => {
                         setLoading(true);
                     },
                     onSuccess: (ctx) => {
                         console.log("Password reset link sent successfully", ctx);
                         setLoading(false);
-                        toast.success("Password reset link sent! Please check your email.");
+                        toast("Password reset link sent! Please check your email for further instructions.",
+                            {
+                                action: {
+                                    label: "Oke",
+                                    onClick: () => {
+                                        toast.dismiss();
+                                    }
+                                }
+                            }
+                            );
                     },
                     onError: (ctx) => {
                         setError(ctx.error.message);

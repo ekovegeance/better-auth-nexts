@@ -19,6 +19,7 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {AlertCircleIcon} from "lucide-react";
 import {Field, FieldError, FieldLabel} from "@/components/ui/field";
 import {Spinner} from "@/components/ui/spinner";
+import {useRouter} from "next/navigation";
 
 export function ResetPasswordForm({
   className,
@@ -26,6 +27,7 @@ export function ResetPasswordForm({
 }: React.ComponentProps<"div">) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter()
 
   const form = useForm({
       defaultValues:{
@@ -55,6 +57,7 @@ export function ResetPasswordForm({
                       toast.success(
                           "Password reset successfully. You can now log in with your new password."
                       );
+                        router.push("/signin")
                   },
                   onError: (ctx) => {
                         setError(ctx.error.message);

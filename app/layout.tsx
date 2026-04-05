@@ -35,7 +35,7 @@ export default function RootLayout({children,}: Readonly<{ children: ReactNode }
             <TRPCProvider>
                 {children}
             </TRPCProvider>
-            <Toaster richColors={true}/>
+            <Toaster richColors={true} closeButton={true} position="top-center"/>
         </ThemeProvider>
         </body>
         </html>

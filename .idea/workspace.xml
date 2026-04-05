@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: rename post router to posts and update related components for consistency">
-      <change afterPath="$PROJECT_DIR$/schemas/auth-schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3187be8f-7757-495a-87a1-881de46cb89b" name="Changes" comment="feat: add authentication forms with validation and loading states using new field components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/forgot-password-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/forgot-password-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/reset-password-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/reset-password-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/signin-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signin-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signup-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landing/edit-user-dialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landing/user-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landing/user-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +107,7 @@
       <workItem from="1775280987769" duration="660000" />
       <workItem from="1775290723943" duration="12610000" />
       <workItem from="1775349662569" duration="107000" />
-      <workItem from="1775349803656" duration="5133000" />
+      <workItem from="1775349803656" duration="7549000" />
     </task>
     <task id="LOCAL-00001" summary="fix: correct typo in database variable name and update module file reference">
       <option name="closed" value="true" />
@@ -279,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775291682698</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: add authentication forms with validation and loading states using new field components">
+      <option name="closed" value="true" />
+      <created>1775362284769</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1775362284769</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +311,7 @@
     <MESSAGE value="refactor: simplify layout structure and update metadata description" />
     <MESSAGE value="feat: update hero component to use SiVercel icon and enhance deploy button" />
     <MESSAGE value="feat: rename post router to posts and update related components for consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: rename post router to posts and update related components for consistency" />
+    <MESSAGE value="feat: add authentication forms with validation and loading states using new field components" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add authentication forms with validation and loading states using new field components" />
   </component>
 </project>
